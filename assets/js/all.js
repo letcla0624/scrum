@@ -137,7 +137,7 @@ var isArrEqual = function isArrEqual(arr1, arr2) {
   return arr1.join("") === arr2.join("") ? true : false;
 };
 
-var answerAry = ["1", "2", "3", "4"];
+var answerAry = ["4", "2", "1", "3"];
 var candidate = Sortable.create(candidateDOM, {
   group: "productBacklog",
   animation: 500

@@ -1231,6 +1231,14 @@ body {
 .bg-white\/50{
   background-color: rgb(255 255 255 / 0.5);
 }
+.bg-secondary-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 236 233 / var(--tw-bg-opacity));
+}
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 172 137 / var(--tw-bg-opacity));
+}
 .p-10{
   padding: 2.5rem;
 }
