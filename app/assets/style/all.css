@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+TC:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    min-width: 1200px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded px-4 py-1 flex justify-center items-center;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  .form-input {
+    @apply placeholder:text-secondary focus:border-primary focus:ring-primary;
+  }
+  .draggable {
+    @apply border border-secondary-dark bg-lime-300 text-secondary-dark w-full text-left px-6 py-3 my-3;
+  }
+}
+.container {
+  min-width: 1200px !important;
+}
+.font-dot {
+  font-family: "DotGothic16", sans-serif !important;
+}
+.officeBg {
+  background: url("../images/bg.svg") 0 0 no-repeat fixed;
+  background-size: cover;
+}
+.staff1 {
+  transform: rotate(100deg);
+  animation: move1 1s both ease-out;
+}
+@keyframes move1 {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: -6rem;
+    left: -9rem;
+  }
+}
+.staff2 {
+  transform: scale(1.25);
+  transform: rotate(-12deg);
+  animation: move2 1s both ease-out;
+}
+@keyframes move2 {
+  0% {
+    bottom: -100%;
+    right: -100%;
+  }
+  100% {
+    bottom: -18rem;
+    right: 18rem;
+  }
+}
+.staff3 {
+  transform: scale(1.1);
+  transform: rotate(30deg);
+  animation: move3 1s both ease-out;
+}
+@keyframes move3 {
+  0% {
+    bottom: -100%;
+    left: -100%;
+  }
+  100% {
+    bottom: -15rem;
+    left: 10rem;
+  }
+}
+.staff4 {
+  transform: rotate(-120deg);
+  animation: move4 1s both ease-out;
+}
+@keyframes move4 {
+  0% {
+    top: -100%;
+    right: -100%;
+  }
+  100% {
+    top: -10rem;
+    right: -5rem;
+  }
+}
+.animate-pulse {
+  animation-duration: 0.8s;
+}
+.strokeText {
+  -webkit-text-stroke: 1.5px #8d7e73;
+}
+.shadow1:hover,
+.shadow1.active {
+  content: url("../images/boy.svg");
+}
+.shadow2:hover,
+.shadow2.active {
+  content: url("../images/girl.svg");
+}
+.time-avatar {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px solid #8d7e73;
+  color: #8d7e73;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.scrumBg {
+  background: url("../images/sprint.svg") 0 0 no-repeat;
+  background-size: cover;
+}
+.codeName {
+  bottom: 9.5rem;
+  left: -6.25rem;
+  transform: rotate(90deg);
+}

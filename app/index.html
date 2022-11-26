@@ -1,0 +1,670 @@
+---
+title: SPRINT *菜鳥*
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="officeBg w-screen h-screen relative overflow-hidden">
+  <p class="text-xs text-gray-800/75 absolute codeName">© The F2E 4th｜Code: 威爾 / Design: 小菜</p>
+
+  <section class="section1">
+    <div class="container mx-auto h-screen flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center relative z-10">
+        <img src="./assets/images/title.svg" alt="title" class="w-full mb-5">
+        <button type="button"
+          class="text-4xl font-bold uppercase text-white tracking-huge strokeText py-5 px-10 animate-pulse openBtn">點
+          擊 開 始</button>
+      </div>
+    </div>
+    <ul>
+      <li class="absolute staff1"><img src="./assets/images/staff1.svg" alt="staff1">
+      </li>
+      <li class="absolute staff2"><img src="./assets/images/staff2.svg" alt="staff2">
+      </li>
+      <li class="absolute staff3"><img src="./assets/images/staff3.svg" alt="staff3">
+      </li>
+      <li class="absolute staff4"><img src="./assets/images/staff4.svg" alt="staff4">
+      </li>
+    </ul>
+  </section>
+
+  <section class="section2 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">？？？</span>
+        <img src="./assets/images/staff1.svg" alt="staff1" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-primary startBtn1 disabled:bg-secondary-light" disabled>開始試煉
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section3 hidden">
+    <div class="w-screen h-screen bg-white flex justify-center items-center relative">
+      <div class="container mx-auto text-center">
+        <div class="">
+          <h2 class="text-4xl text-secondary-dark font-dot">請點選代表你的角色。</h2>
+          <div class="flex justify-evenly items-end">
+            <img src="./assets/images/shadow1.svg" alt="male" class="humanShadow shadow1 cursor-pointer w-[240px]">
+            <img src="./assets/images/shadow2.svg" alt="female" class="humanShadow shadow2 cursor-pointer w-[240px]">
+          </div>
+          <div class="w-1/2 mx-auto mt-10">
+            <input type="text" class="text-2xl form-input px-4 py-3 rounded-xl w-full nameInput" placeholder="請輸入你的名字">
+            <button type="button" class="text-2xl btn btn-primary py-3 my-4 rounded-xl w-full confirmBtn">確定</button>
+          </div>
+        </div>
+      </div>
+      <div class=" bg-slate-900/80 w-full h-full absolute noNameBlock hidden">
+        <div class="container mx-auto h-screen flex justify-center items-center relative">
+          <div class="absolute -bottom-40 right-0 z-[1]">
+            <span
+              class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">？？？</span>
+            <img src="./assets/images/staff1.svg" alt="staff1" class="relative">
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+            <span id="typed2"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary okBtn disabled:bg-secondary-light" disabled>好的
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section4 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小敏</span>
+        <img src="./assets/images/staff1.svg" alt="staff1" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed3"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-primary startBtn2 disabled:bg-secondary-light" disabled>開始試煉
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section5 hidden">
+    <div class="w-screen h-screen flex justify-center items-center relative">
+      <div class="container mx-auto h-full relative">
+        <div class="flex flex-col justify-around items-center h-full">
+          <h2 class="bg-white text-secondary-dark text-2xl rounded-xl px-8 py-3 flex items-center mt-10">
+            請把需求放進產品代辦清單，並調整代辦的優先度順序。公司也推薦使用 <img src="./assets/images/jira.svg" alt="jira" class="px-3">來做任務的管理喔。
+          </h2>
+          <div class="bg-white w-full max-w-[700px] shadow-2xl rounded-3xl p-10 text-center overflow-y-scroll">
+            <h2 class="text-secondary-dark text-2xl font-bold pb-6">產品代辦清單 ProductBacklog</h2>
+            <div class="dropContainer relative flex flex-col items-center">
+              <div class="candidate text-left relative w-full">
+                <p class="draggble px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark my-3 w-full"
+                  draggable="true" data-id="1">
+                  會員系統(登入、註冊、權限管理)
+                </p>
+                <p class="draggble px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark my-3 w-full"
+                  draggable="true" data-id="2">
+                  應徵者的線上履歷編輯器
+                </p>
+                <p class="draggble px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark my-3 w-full"
+                  draggable="true" data-id="3">
+                  前台職缺列表(職缺詳細內容、點選可發送應徵意願)
+                </p>
+                <p class="draggble px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark my-3 w-full"
+                  draggable="true" data-id="4">
+                  後台職缺管理功能(資訊上下架、顯示應徵者資料)
+                </p>
+              </div>
+              <div class="w-full mb-10">
+                <p class="text-secondary flex justify-center items-center py-3">
+                  優先度高
+                  <span class="material-icons-outlined">north</span>
+                </p>
+                <div class="productBacklog min-h-[264px] border-dashed border-2 border-secondary-dark px-3"></div>
+                <p class="text-secondary flex justify-center items-center py-3">
+                  優先度低
+                  <span class="material-icons-outlined">south</span>
+                </p>
+              </div>
+              <button type="button" class="btn btn-primary px-8 py-3 w-4/5 doneBtn">我完成了</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-900/80 w-full h-full absolute answerBlock hidden">
+        <div class="container mx-auto h-screen flex justify-center items-center relative">
+          <div class="absolute -bottom-40 right-0 z-[1]">
+            <span
+              class="text-2xl font-dot bg-white text-secondary-dark  rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小敏</span>
+            <img src="./assets/images/staff1.svg" alt="staff1" class="relative">
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 wrongBlock hidden">
+            <span id="typed4"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary okBtn2 disabled:bg-secondary-light" disabled>好的
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 correctBlock hidden">
+            <span id="typed5"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary nextBtn disabled:bg-secondary-light" disabled>謝謝
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section6 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小敏</span>
+        <img src="./assets/images/staff1.svg" alt="staff1" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed6"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn1 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section7 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小捷</span>
+        <img src="./assets/images/staff2.svg" alt="staff2" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed7"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn2 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section8 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="flex justify-center items-end w-full gap-10">
+        <div class="relative">
+          <span
+            class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 left-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+          <img src="./assets/images/staff3.svg" alt="staff3" class="w-[250px]">
+        </div>
+        <div class="relative">
+          <span
+            class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小凱</span>
+          <img src="./assets/images/staff4.svg" alt="staff4" class="w-[250px]">
+        </div>
+      </div>
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小捷</span>
+        <img src="./assets/images/staff2.svg" alt="staff2" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed8"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn3 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section9 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+        <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed9"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn4 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section10 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小凱</span>
+        <img src="./assets/images/staff4.svg" alt="staff4" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed10"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-primary startBtn3 disabled:bg-secondary-light" disabled>開始試煉
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section11 hidden">
+    <div class="w-screen h-screen flex justify-center items-center relative">
+      <div class="container mx-auto h-full relative">
+        <div class="flex flex-col justify-around items-center h-full max-w-[1100px] mx-auto">
+          <div class="w-full relative">
+            <h2 class="bg-white text-secondary-dark text-lg rounded-xl px-8 py-8 flex items-center shadow-md">
+              請將產品待辦清單中的項目拖曳到短衝清單。 (20點內)
+            </h2>
+            <img src="./assets/images/staff2.svg" alt="staff2" class="w-[80px] absolute right-0 -bottom-1/4">
+          </div>
+          <div class="flex justify-around items-center gap-6 text-center w-full">
+            <div class="backlog-section bg-white w-full h-full rounded-2xl shadow-2xl p-5">
+              <h3 class="text-2xl text-secondary-dark font-bold mb-5">產品待辦清單 ProductBacklog</h3>
+              <p class="text-secondary flex justify-center items-center py-3">
+                優先度高
+                <span class="material-icons-outlined">north</span>
+              </p>
+              <div class="droppable-container text-left min-h-[240px]"></div>
+              <p class="text-secondary flex justify-center items-center py-3">
+                優先度低
+                <span class="material-icons-outlined">south</span>
+              </p>
+            </div>
+            <div class="sprint-section bg-yellow-200 w-full h-full rounded-2xl shadow-2xl p-5">
+              <h3 class="text-2xl text-secondary-dark font-bold mb-5">開發 A 組的短衝待辦清單</h3>
+              <p class="text-secondary-dark mb-5"><span class="total-score"></span> / 20 點</p>
+              <div class="droppable-container min-h-[240px] border-2 border-dashed border-secondary-dark px-3 mb-5">
+              </div>
+              <p class="warning-text text-red-500 hidden py-3">點數已超出上限，請移除一些項目</p>
+              <button type="button"
+                class="btn btn-primary px-8 py-3 w-4/5 mx-auto text-2xl font-bold font-dot doneBtn2">準備好了，開始
+                Sprint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-900/80 w-full h-full absolute answerBlock2 hidden">
+        <div class="container mx-auto h-screen flex justify-center items-center relative">
+          <div class="absolute -bottom-40 right-0 z-[1]">
+            <span
+              class="text-2xl font-dot bg-white text-secondary-dark  rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小捷</span>
+            <img src="./assets/images/staff2.svg" alt="staff2" class="relative">
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 wrongBlock2 hidden">
+            <span id="typed11"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary okBtn3 disabled:bg-secondary-light" disabled>好的
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 correctBlock2 hidden">
+            <span id="typed12"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary nextBtn3 disabled:bg-secondary-light" disabled>謝謝
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section12 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+        <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed13"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn5 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section13 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+        <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed14"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn6 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section14 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+        <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed15"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn7 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section15 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+        <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed16"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-primary startBtn4 disabled:bg-secondary-light" disabled>開始試煉
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section16 hidden">
+    <div class="w-screen h-screen flex justify-center items-center relative">
+      <div class="container mx-auto h-full relative">
+        <div class="flex flex-col justify-around items-center h-full max-w-[1100px] mx-auto">
+          <div class="w-full relative">
+            <h2 class="bg-white text-secondary-dark text-lg rounded-xl px-8 py-8 flex items-center shadow-md">
+              在這經典的 Scrum 流程圖中，這些流程分別代表哪一個會議呢？請把對應的流程拖曳到正確位置。
+            </h2>
+            <img src="./assets/images/staff3.svg" alt="staff3" class="w-[80px] absolute right-0 -bottom-1/4">
+          </div>
+          <div class="bg-white w-full  shadow-2xl rounded-3xl px-10 py-5 text-center relative">
+            <h2 class="text-secondary-dark text-2xl font-bold pb-6">Scrum 流程圖</h2>
+            <div class="relative">
+              <img src="./assets/images/scrum.svg" alt="scrumBg" class="mb-5" draggable="false">
+              <p class="text-secondary-dark text-2xl font-bold absolute top-[60%] left-[220px]">Sprint</p>
+            </div>
+            <button type="button" class="btn btn-primary px-8 py-3 w-2/5 mx-auto doneBtn3">我完成了</button>
+
+            <div class="">
+              <div
+                class="dropBlock border-2 border-dashed border-secondary-dark/30 bg-white/50 w-1/3 h-[54px] absolute top-[100px] left-[240px]"
+                ondrop="drop(event)" ondragover="allowDrop(event)" data-id="drag1"></div>
+              <div
+                class="dropBlock border-2 border-dashed border-secondary-dark/30 bg-white/50 w-1/3 h-[54px] absolute bottom-[120px] right-[400px]"
+                ondrop="drop(event)" ondragover="allowDrop(event)" data-id="drag2"></div>
+              <div
+                class="dropBlock border-2 border-dashed border-secondary-dark/30 bg-white/50 w-1/3 h-[54px] absolute bottom-[120px] right-3"
+                ondrop="drop(event)" ondragover="allowDrop(event)" data-id="drag3"></div>
+            </div>
+            <div class="w-1/3 h-[152px] ml-auto g-3 p-3 absolute right-0 top-0" ondrop="drop(event)"
+              ondragover="allowDrop(event)">
+              <p class="px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark w-full" draggable="true"
+                ondragstart="drag(event)" id="drag2" data-id="2">
+                短衝檢視會議 Sprint Review
+              </p>
+              <p class="px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark w-full" draggable="true"
+                ondragstart="drag(event)" id="drag3" data-id="3">
+                短衝自省會議 Sprint Retrospective
+              </p>
+              <p class="px-6 py-3 border border-secondary-dark bg-lime-300 text-secondary-dark w-full" draggable="true"
+                ondragstart="drag(event)" id="drag1" data-id="1">
+                每日站立會議 (Daily Scrum)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-900/80 w-full h-full absolute answerBlock3 hidden">
+        <div class="container mx-auto h-screen flex justify-center items-center relative">
+          <div class="absolute -bottom-40 right-0 z-[1]">
+            <span
+              class="text-2xl font-dot bg-white text-secondary-dark  rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小斯</span>
+            <img src="./assets/images/staff3.svg" alt="staff3" class="relative">
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 wrongBlock3 hidden">
+            <span id="typed17"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary okBtn4 disabled:bg-secondary-light" disabled>好的
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 correctBlock3 hidden">
+            <span id="typed18"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary nextBtn4 disabled:bg-secondary-light" disabled>謝謝
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section17 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小凱</span>
+        <img src="./assets/images/staff4.svg" alt="staff4" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed19"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn8 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section18 hidden">
+    <div class="w-screen h-screen flex justify-center items-center relative">
+      <div class="container mx-auto h-full relative">
+        <div class="flex flex-col justify-around items-center h-full max-w-[1100px] mx-auto">
+          <div class="w-full relative">
+            <h2 class="bg-white text-secondary-dark text-lg rounded-xl px-8 py-8 flex items-center shadow-md">
+              重點在於「正面表述」，你也思考看看，哪一些是適合 Retro 的回饋吧！
+            </h2>
+            <img src="./assets/images/staff4.svg" alt="staff4" class="w-[80px] absolute right-0 -bottom-1/4">
+          </div>
+          <div class="bg-white w-full text-secondary-dark shadow-2xl rounded-3xl p-10">
+            <div class="">
+              <div class="mb-10">
+                <h2 class="text-2xl font-bold ">做得好的地方</h2>
+                <ul>
+                  <li
+                    class="flex items-center text-2xl border-2 border-dashed border-secondary-dark rounded-full p-3 my-3">
+                    <input type="radio" class="text-primary focus:ring-primary w-7 h-7 mr-5" name="one" id="radio1">
+                    <label for="radio1" class="w-full cursor-pointer">這次我幫了很多人救火耶 ^_^</label>
+                  </li>
+                  <li
+                    class="flex items-center text-2xl border-2 border-dashed border-secondary-dark rounded-full p-3 my-3">
+                    <input type="radio" class="text-primary focus:ring-primary w-7 h-7 mr-5" name="one" id="radio2">
+                    <label for="radio2" class="w-full cursor-pointer">大家在開發上都會互相 cover，讓任務都有準在時間內完成。</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-10">
+                <h2 class="text-2xl font-bold">有哪些可以做得更好？</h2>
+                <ul>
+                  <li
+                    class="flex items-center text-2xl border-2 border-dashed border-secondary-dark rounded-full p-3 my-3">
+                    <input type="radio" class="text-primary focus:ring-primary w-7 h-7 mr-5" name="two" id="radio3">
+                    <label for="radio3" class="w-full cursor-pointer">可以記錄這次的開發時間，讓預估團隊點數可以更精準。</label>
+                  </li>
+                  <li
+                    class="flex items-center text-2xl border-2 border-dashed border-secondary-dark rounded-full p-3 my-3">
+                    <input type="radio" class="text-primary focus:ring-primary w-7 h-7 mr-5" name="two" id="radio4">
+                    <label for="radio4" class="w-full cursor-pointer">開發時間預估不準確，請後端下次改進，避免 delay 到我：）</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary px-8 py-3 w-4/5 mx-auto doneBtn4">我完成了</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-900/80 w-full h-full absolute answerBlock4 hidden">
+        <div class="container mx-auto h-screen flex justify-center items-center relative">
+          <div class="absolute -bottom-40 right-0 z-[1]">
+            <span
+              class="text-2xl font-dot bg-white text-secondary-dark  rounded-full top-0 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小凱</span>
+            <img src="./assets/images/staff4.svg" alt="staff4" class="relative">
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 wrongBlock4 hidden">
+            <span id="typed20"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary okBtn5 disabled:bg-secondary-light" disabled>好的
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0 correctBlock4 hidden">
+            <span id="typed21"></span><br>
+            <div class="flex justify-end my-4">
+              <button type="button" class="btn btn-secondary nextBtn5 disabled:bg-secondary-light" disabled>謝謝
+                <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section19 hidden">
+    <div class="container mx-auto h-screen flex justify-center items-center relative">
+      <div class="absolute -bottom-40 right-0 z-[1]">
+        <span
+          class="text-2xl font-dot bg-white text-secondary-dark rounded-full top-10 right-0 -mx-1 -mt-1 px-8 py-2 absolute z-[1]">小凱</span>
+        <img src="./assets/images/staff4.svg" alt="staff4" class="relative">
+      </div>
+      <div
+        class="absolute bottom-10 bg-white rounded-3xl shadow border-8 border-secondary text-2xl font-dot text-secondary-dark tracking-widest leading-loose w-4/5 pl-12 pr-72 py-10 z-0">
+        <span id="typed22"></span><br>
+        <div class="flex justify-end my-4">
+          <button type="button" class="btn btn-secondary continueBtn9 disabled:bg-secondary-light" disabled>繼續
+            <span class="material-icons-outlined text-5xl -m-2">arrow_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section20 hidden">
+    <div class="container mx-auto h-screen flex flex-col justify-center items-center relative">
+      <div class="bg-white rounded-2xl shadow-2xl w-3/5 p-10">
+        <div class="border-8 border-yellow-200 w-full h-full flex flex-col items-center relative">
+          <img src="./assets/images/hexschool.svg" alt="hexschool"
+            class="absolute -top-10 left-0 right-0 m-auto bg-white">
+          <div class="text-3xl tracking-widest text-secondary-dark px-14 py-5 mt-14 flex flex-col items-center">
+            <h2 class="font-bold mb-14">結業證書</h2>
+            <img alt="photo" class="absolute left-10 top-2 photoHead">
+            <p class="text-center leading-normal">
+              <span class="nameTxt"></span><br>
+              參加六角學院 Scrum 新手培訓營，經測驗合格，特發給結業證書以資證明。
+            </p>
+            <p class="my-14">校長 <img src="./assets/images/teacher.svg" alt="teacher" class="inline"></p>
+            <div class="bottom-0 left-0 right-0 m-auto text-center">
+              <p>六角學院波利馬資訊科技有限公司</p>
+              <p class="text-2xl mt-3 todayDate"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="./index.html" class="btn btn-primary px-8 py-3 w-auto mx-auto my-4">
+        <span class="material-icons mr-1">home</span>
+        回首頁
+      </a>
+      <div class="">
+        <img src="./assets/images/staff3.gif" alt="staff3" class="absolute bottom-0 left-0 w-[150px]">
+        <img src="./assets/images/staff4.gif" alt="staff4" class="absolute bottom-0 left-[200px] w-[150px]">
+        <img src="./assets/images/staff1.gif" alt="staff1" class="absolute bottom-0 right-[200px] w-[150px]">
+        <img src="./assets/images/staff2.gif" alt="staff2" class="absolute bottom-0 right-0 w-[150px]">
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
