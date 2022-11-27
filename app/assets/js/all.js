@@ -144,7 +144,7 @@ const productBacklogDOM = document.querySelector(".productBacklog");
 const isArrEqual = (arr1, arr2) => {
   return arr1.join("") === arr2.join("") ? true : false;
 };
-const answerAry = ["4", "2", "1", "3"];
+const answerAry = ["4", "3", "2", "1"];
 
 var candidate = Sortable.create(candidateDOM, {
   group: "productBacklog",
